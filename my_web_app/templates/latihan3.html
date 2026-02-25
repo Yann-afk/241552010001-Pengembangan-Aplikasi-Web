@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Premium - Sate Ayam Madura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#faf7f2] min-h-screen py-12 px-4 font-serif">
+
+    <div class="max-w-3xl mx-auto bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden border border-orange-100">
+        
+        <div class="bg-orange-600 p-10 text-center text-white relative">
+            <div class="absolute top-4 left-4 opacity-20 text-4xl">👨‍🍳</div>
+            <h1 class="text-3xl md:text-5xl font-black mb-4 tracking-tight uppercase">Resep Sate Ayam Madura</h1>
+            <p class="text-orange-100 italic text-lg">
+                Sate ayam adalah hidangan <strong class="text-white underline decoration-orange-400">ikonik Indonesia</strong> yang memiliki aroma <em class="text-white">khas panggangan</em> arang.
+            </p>
+        </div>
+
+        <div class="relative h-64 md:h-96 overflow-hidden">
+            <img src="{{ url_for('static', filename='sate.jpg') }}" 
+                 alt="Sate Ayam Madura Premium" 
+                 class="w-full h-full object-cover shadow-inner hover:scale-105 transition-transform duration-700">
+            <div class="absolute bottom-0 bg-gradient-to-t from-black/60 to-transparent w-full p-6">
+                <span class="text-white text-xs tracking-[0.2em] uppercase font-sans font-bold">Traditional Indonesian Cuisine</span>
+            </div>
+        </div>
+
+        <div class="p-8 md:p-12 space-y-12">
+            
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Bahan Utama & Bumbu</h3>
+                    <div class="h-px flex-1 bg-orange-200"></div>
+                </div>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <li class="flex items-center p-3 bg-orange-50 rounded-xl text-gray-700 border-l-4 border-orange-500">
+                        <span class="mr-3 text-orange-600 font-bold">•</span> 500g dada ayam (potong dadu)
+                    </li>
+                    <li class="flex items-center p-3 bg-orange-50 rounded-xl text-gray-700 border-l-4 border-orange-500">
+                        <span class="mr-3 text-orange-600 font-bold">•</span> 200g kacang tanah (goreng)
+                    </li>
+                    <li class="flex items-center p-3 bg-orange-50 rounded-xl text-gray-700 border-l-4 border-orange-500">
+                        <span class="mr-3 text-orange-600 font-bold">•</span> Kecap manis & jeruk limau
+                    </li>
+                    <li class="flex items-center p-3 bg-orange-50 rounded-xl text-gray-700 border-l-4 border-orange-500">
+                        <span class="mr-3 text-orange-600 font-bold">•</span> Tusuk sate secukupnya
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Langkah-langkah Memasak</h3>
+                    <div class="h-px flex-1 bg-orange-200"></div>
+                </div>
+                <ol class="space-y-4">
+                    <li class="flex gap-4">
+                        <span class="flex-none w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg shadow-orange-200">1</span>
+                        <p class="text-gray-600 pt-1 text-lg">Tusuk potongan daging ayam ke tusuk sate yang tersedia.</p>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-none w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg shadow-orange-200">2</span>
+                        <p class="text-gray-600 pt-1 text-lg">Campurkan kacang halus dengan kecap dan sedikit air sebagai bumbu olesan.</p>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-none w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg shadow-orange-200">3</span>
+                        <p class="text-gray-600 pt-1 text-lg">Bakar sate di atas bara api hingga matang kecokelatan.</p>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-none w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg shadow-orange-200">4</span>
+                        <p class="text-gray-600 pt-1 text-lg">Sajikan dengan siraman bumbu kacang dan perasan jeruk limau.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="bg-stone-100 p-8 rounded-2xl border border-dashed border-stone-300">
+                <h3 class="text-xl font-bold text-stone-800 mb-6 flex items-center gap-2">
+                    <span class="text-2xl">📖</span> Istilah Kuliner Sate
+                </h3>
+                <dl class="space-y-6">
+                    <div>
+                        <dt class="font-black text-orange-800 uppercase tracking-wider text-sm mb-1">Marinate (Marinasi)</dt>
+                        <dd class="text-stone-600 italic border-l-2 border-stone-300 pl-4">Proses merendam daging dalam bumbu agar rasa meresap sebelum dimasak.</dd>
+                    </div>
+                    <div>
+                        <dt class="font-black text-orange-800 uppercase tracking-wider text-sm mb-1">Bara Api</dt>
+                        <dd class="text-stone-600 italic border-l-2 border-stone-300 pl-4">Arang yang sudah panas membara, digunakan untuk memberikan aroma asap (smoky) pada sate.</dd>
+                    </div>
+                </dl>
+            </section>
+
+        </div>
+
+        <div class="bg-stone-50 p-6 text-center border-t border-stone-100">
+            <p class="text-stone-400 text-sm">Selamat Memasak & Nikmati Hidangan Anda!</p>
+        </div>
+    </div>
+
+</body>
+</html>
