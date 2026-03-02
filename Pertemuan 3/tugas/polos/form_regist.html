@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek 3: Form Registrasi</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto; }
+        fieldset { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+        legend { font-weight: bold; padding: 0 10px; }
+        div { margin-bottom: 12px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"], input[type="email"], input[type="date"], input[type="password"], select {
+            width: 100%; padding: 8px; box-sizing: border-box;
+        }
+        .inline-group { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; }
+        .inline-group input { width: auto; }
+        button { padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Form Registrasi Pengguna</h2>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Informasi Pribadi</legend>
+            <div>
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required placeholder="Contoh: Budi Santoso">
+            </div>
+            <div>
+                <label for="lahir">Tanggal Lahir:</label>
+                <input type="date" id="lahir" name="lahir" required>
+            </div>
+            <div>
+                <label>Jenis Kelamin:</label>
+                <div class="inline-group">
+                    <input type="radio" id="pria" name="gender" value="pria" required> <label for="pria">Pria</label>
+                    <input type="radio" id="wanita" name="gender" value="wanita"> <label for="wanita">Wanita</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Detail Akun</legend>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="alamat@email.com">
+            </div>
+            <div>
+                <label for="username">Username (min. 5 karakter):</label>
+                <input type="text" id="username" name="username" minlength="5" pattern="[A-Za-z0-9]+" required>
+            </div>
+            <div>
+                <label for="password">Password (Angka 0-9, max 8):</label>
+                <input type="password" id="password" name="password" pattern="\d*" maxlength="8" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferensi & Lainnya</legend>
+            <div>
+                <label for="kategori">Kategori Minat (Optgroup):</label>
+                <select id="kategori" name="kategori">
+                    <optgroup label="Teknologi">
+                        <option value="web">Web Development</option>
+                        <option value="data">Data Science</option>
+                    </optgroup>
+                    <optgroup label="Desain">
+                        <option value="uiux">UI/UX Design</option>
+                        <option value="graphic">Graphic Design</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <label>Langganan Newsletter:</label>
+                <div class="inline-group">
+                    <input type="checkbox" id="news" name="news"> <label for="news">Ya, saya ingin menerima berita.</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="inline-group">
+            <input type="checkbox" id="syarat" name="syarat" required>
+            <label for="syarat">Saya menyetujui syarat dan ketentuan yang berlaku.</label>
+        </div>
+
+        <button type="submit">Daftar Sekarang</button>
+
+    </form>
+
+</body>
+</html>

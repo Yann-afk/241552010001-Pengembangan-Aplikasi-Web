@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek 3: Form Registrasi - Grand Line Edition</title>
+    <link rel="stylesheet" href="../styles.css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Form Registrasi Pengguna</h2>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Informasi Pribadi</legend>
+                <div class="input-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Contoh: Monkey D. Luffy">
+                </div>
+                <div class="input-group">
+                    <label for="lahir">Tanggal Lahir:</label>
+                    <input type="date" id="lahir" name="lahir" required>
+                </div>
+                <div class="input-group">
+                    <label>Jenis Kelamin:</label>
+                    <div class="option-group">
+                        <input type="radio" id="pria" name="gender" value="pria" required> 
+                        <label for="pria">Pria</label>
+                        <input type="radio" id="wanita" name="gender" value="wanita"> 
+                        <label for="wanita">Wanita</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detail Akun</legend>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="luffy@sunnygo.com">
+                </div>
+                <div class="input-group">
+                    <label for="username">Username (min. 5 karakter):</label>
+                    <input type="text" id="username" name="username" minlength="5" pattern="[A-Za-z0-9]+" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password (Angka 0-9, max 8):</label>
+                    <input type="password" id="password" name="password" pattern="\d*" maxlength="8" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferensi & Lainnya</legend>
+                <div class="input-group">
+                    <label for="kategori">Kategori Minat:</label>
+                    <select id="kategori" name="kategori">
+                        <optgroup label="Teknologi">
+                            <option value="web">Web Development</option>
+                            <option value="data">Data Science</option>
+                        </optgroup>
+                        <optgroup label="Desain">
+                            <option value="uiux">UI/UX Design</option>
+                            <option value="graphic">Graphic Design</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <div class="option-group">
+                        <input type="checkbox" id="news" name="news"> 
+                        <label for="news">Langganan Berita Bajak Laut</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="option-group agreement">
+                <input type="checkbox" id="syarat" name="syarat" required>
+                <label for="syarat">Saya menyetujui syarat dan ketentuan Grand Line.</label>
+            </div>
+
+            <button type="submit" class="btn-submit">Daftar Sekarang</button>
+        </form>
+    </div>
+
+</body>
+</html>
