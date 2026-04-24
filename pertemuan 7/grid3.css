@@ -1,0 +1,70 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: sans-serif; padding: 16px; background: #f8fafc; color: #1e293b; font-size: 14px; }
+
+h1 { font-size: 1.1rem; margin-bottom: 4px; }
+.subtitle { color: #64748b; font-size: 0.8rem; margin-bottom: 6px; }
+
+.soal { margin-bottom: 28px; }
+.soal-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 2px; color: #10b981; }
+.soal-desc  { font-size: 0.8rem; color: #475569; margin-bottom: 8px; }
+
+/* ── item: teks biasa dengan border tipis ── */
+.item {
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.8rem;
+  background: #fff;
+}
+
+/* SOAL 1 */
+#s1 {
+  grid-template-columns: 1fr;
+  background: orange;
+}
+@media (min-width: 640px) {
+  #s1 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  #s1 { grid-template-columns: repeat(4, 1fr); }
+}
+/* SOAL 2 */
+#s2 {
+  display: grid;
+  gap: 6px;
+  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr))
+}
+
+/* SOAL 3 */
+#s3 {
+  display: grid;
+  gap: 6px;
+  grid-template-areas:
+    "header header header"
+    "artikel iklan iklan"
+    "footer foster foster";
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  #s3 {
+    grid-template-areas:
+      "header  header"
+      "artikel iklan"
+      "footer  footer";
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+#s3 .header  { background: #6366f1; padding: 8px; text-align: center; font-size: 0.8rem; grid-area: header;}
+#s3 .artikel { background: #10b981; padding: 8px; font-size: 0.8rem; text-align: center; grid-area: artikel;}
+#s3 .iklan   { background: #f59e0b; padding: 8px; font-size: 0.8rem; text-align: center;  grid-area: iklan; }
+#s3 .footer  { background: #475569; padding: 8px; text-align: center; font-size: 0.8rem; grid-area: footer;}
+
+/* ── kunci jawaban ── */
+details { margin-top: 8px; }
+summary { cursor: pointer; color: #10b981; font-size: 0.8rem; font-weight: 600; user-select: none; }
+details pre {
+  background: #1e293b; color: #a5f3fc;
+  padding: 10px; border-radius: 4px;
+  font-size: 0.76rem; margin-top: 6px; white-space: pre-wrap;
+}
