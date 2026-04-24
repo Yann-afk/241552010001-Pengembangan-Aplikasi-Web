@@ -40,10 +40,11 @@ h1 { font-size: 1.1rem; margin-bottom: 4px; }
   display: grid;
   gap: 6px;
   grid-template-areas:
-    "header header header"
-    "artikel iklan iklan"
-    "footer foster foster";
-  grid-template-columns: 1fr;
+    "header header"
+    "artikel iklan"
+    "footer foster";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 3fr 3fr 3fr;
 }
 @media (min-width: 768px) {
   #s3 {
@@ -52,6 +53,7 @@ h1 { font-size: 1.1rem; margin-bottom: 4px; }
       "artikel iklan"
       "footer  footer";
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 3fr 3fr;
   }
 }
 
